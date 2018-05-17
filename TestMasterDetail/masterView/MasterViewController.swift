@@ -10,17 +10,7 @@ import UIKit
 
 class MasterViewController: UITableViewController, JogoCellDelegate {
     
-    func deveRetornarJogo() -> Jogo {
-        
-        let url = URL(fileURLWithPath: "")
-
-        let timeCasa = Time(comNome: "Brasil", imagePath: url , sigla: "BRA")
-        let timeVisitante = Time(comNome: "ALemanha", imagePath: url, sigla: "ALE")
-        let jogo = Jogo(timeCasa: timeCasa, timeVisitante: timeVisitante, golsCasa: 0, golsVisitante: 0)
-        return jogo
-    }
-    
-
+    var delegate : ContainerViewControllerDelegate?
     let names = ["Ramires","João","Maria","Pedro"]
     var nameSelected : String!
     var selectedIndexPath : IndexPath?
@@ -33,6 +23,15 @@ class MasterViewController: UITableViewController, JogoCellDelegate {
         
         let nib = UINib(nibName: "JogoTableViewCell", bundle: Bundle.main)
         tableView.register(nib, forCellReuseIdentifier: "cell")
+
+    }
+
+    func deveRetornarJogo() -> Jogo {
+        let url = URL(fileURLWithPath: "")
+        let timeCasa = Time(comNome: "Brasil", imagePath: url , sigla: "BRA")
+        let timeVisitante = Time(comNome: "ALemanha", imagePath: url, sigla: "ALE")
+        let jogo = Jogo(timeCasa: timeCasa, timeVisitante: timeVisitante, golsCasa: 0, golsVisitante: 0)
+        return jogo
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -57,63 +56,31 @@ class MasterViewController: UITableViewController, JogoCellDelegate {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedIndexPath = indexPath
-        if isPhone && isPortrait {
+        if  Device.isPhone && Device.isPortrait {
             tableView.deselectRow(at: indexPath, animated: true)
         }
         nameSelected = names[indexPath.row]
-        performSegue(withIdentifier: "detail", sender: nil)
+        delegate?.navegarParaDetailView(jogo: deveRetornarJogo())
     }
     
-    
     func showDetailViewForIpad(){
-        if (isPad || isLandscape) && !names.isEmpty {
+        if (Device.isPad || Device.isLandscape) && !names.isEmpty {
             selectedIndexPath = IndexPath(row: 0, section: 0)
             nameSelected = names.first
             tableView.selectRow(at: selectedIndexPath, animated: false, scrollPosition: .top)
-            performSegue(withIdentifier: "detail", sender: nil)
+            delegate?.navegarParaDetailView(jogo: deveRetornarJogo())
         }
     }
     
     @objc func orientationDidChange(){
-        if isPortrait && isPhone {
-            if let indexPath = selectedIndexPath {
-                tableView.deselectRow(at: indexPath , animated: false)
-                performSegue(withIdentifier: "detail", sender: nil)
-            }
-        }else {
-            tableView.selectRow(at: selectedIndexPath, animated: true, scrollPosition: .top)
+        if Device.isLandscape && Device.isPhone {
+            delegate?.popViewController()
         }
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "detail" {
-            if let viewDetail = segue.destination as? DetailViewController{
-                viewDetail.name = nameSelected
-            }
-        }
-    }
-    
+
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80.0
     }
 
 }
 
-// MARK: variaveis e metodos auxiliares
-extension MasterViewController {
-    var isPhone : Bool {
-        return UIDevice.current.userInterfaceIdiom == .phone
-    }
-    
-    var isPad : Bool {
-        return UIDevice.current.userInterfaceIdiom == .pad
-    }
-    
-    var isPortrait : Bool {
-        return UIApplication.shared.statusBarOrientation.isPortrait
-    }
-    
-    var isLandscape : Bool {
-        return UIApplication.shared.statusBarOrientation.isLandscape
-    }
-}
