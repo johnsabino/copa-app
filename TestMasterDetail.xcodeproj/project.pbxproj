@@ -21,6 +21,9 @@
 		BE5F38CC20AB241C00E22602 /* Jogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F38CB20AB241C00E22602 /* Jogo.swift */; };
 		BE6C255B20AC5C4A003EE702 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6C255920AC5C4A003EE702 /* DetailTableViewCell.swift */; };
 		BE6C255C20AC5C4A003EE702 /* DetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE6C255A20AC5C4A003EE702 /* DetailTableViewCell.xib */; };
+		BEC0010920ADA37200FA9141 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC0010820ADA37200FA9141 /* ContainerViewController.swift */; };
+		BEC0010B20ADAA4200FA9141 /* ContainerViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC0010A20ADAA4200FA9141 /* ContainerViewControllerDelegate.swift */; };
+		BEC0010D20ADBF8D00FA9141 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC0010C20ADBF8D00FA9141 /* Device.swift */; };
 		F1DC731320AA02C300525AB0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DC731120AA02C300525AB0 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +44,9 @@
 		BE5F38CB20AB241C00E22602 /* Jogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jogo.swift; sourceTree = "<group>"; };
 		BE6C255920AC5C4A003EE702 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		BE6C255A20AC5C4A003EE702 /* DetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTableViewCell.xib; sourceTree = "<group>"; };
+		BEC0010820ADA37200FA9141 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		BEC0010A20ADAA4200FA9141 /* ContainerViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewControllerDelegate.swift; sourceTree = "<group>"; };
+		BEC0010C20ADBF8D00FA9141 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		F1DC731120AA02C300525AB0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,12 +85,14 @@
 				BE5F38BA20AB199500E22602 /* detailView */,
 				BE02311820A9CBFD004767CB /* AppDelegate.swift */,
 				BE02311C20A9CBFD004767CB /* Main.storyboard */,
+				BEC0010A20ADAA4200FA9141 /* ContainerViewControllerDelegate.swift */,
 				BE02311F20A9CBFD004767CB /* Assets.xcassets */,
 				BE02312120A9CBFD004767CB /* LaunchScreen.storyboard */,
 				BE02312420A9CBFD004767CB /* Info.plist */,
 				BE02312C20A9D5D6004767CB /* PrimaryViewController.swift */,
 				BE5F38C920AB234C00E22602 /* Time.swift */,
 				BE5F38CB20AB241C00E22602 /* Jogo.swift */,
+				BEC0010820ADA37200FA9141 /* ContainerViewController.swift */,
 			);
 			path = TestMasterDetail;
 			sourceTree = "<group>";
@@ -104,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				BE02312A20A9D036004767CB /* MasterViewController.swift */,
+				BEC0010C20ADBF8D00FA9141 /* Device.swift */,
 			);
 			path = masterView;
 			sourceTree = "<group>";
@@ -192,10 +201,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEC0010D20ADBF8D00FA9141 /* Device.swift in Sources */,
 				BE02313120A9D8A5004767CB /* DetailDelegate.swift in Sources */,
 				BE02312D20A9D5D6004767CB /* PrimaryViewController.swift in Sources */,
 				BE5F38C820AB22C800E22602 /* JogoCellDelegate.swift in Sources */,
+				BEC0010920ADA37200FA9141 /* ContainerViewController.swift in Sources */,
 				F1DC731320AA02C300525AB0 /* DetailViewController.swift in Sources */,
+				BEC0010B20ADAA4200FA9141 /* ContainerViewControllerDelegate.swift in Sources */,
 				BE5F38C420AB1C0600E22602 /* JogoTableViewCell.swift in Sources */,
 				BE5F38CC20AB241C00E22602 /* Jogo.swift in Sources */,
 				BE5F38CA20AB234C00E22602 /* Time.swift in Sources */,
