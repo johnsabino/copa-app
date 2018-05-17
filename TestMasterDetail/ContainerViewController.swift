@@ -16,7 +16,6 @@ class ContainerViewController: UIViewController, ContainerViewControllerDelegate
         if let master = self.childViewControllers.first as? MasterViewController {
             master.delegate = self
         }
-    
     }
     
     func navegarParaDetailView(jogo: Jogo) {

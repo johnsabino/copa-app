@@ -9,7 +9,7 @@
 import Foundation
 class Time {
     let nome : String
-    let imagem : URL
+    let imagem : String
     let sigla : String
     var vitorias : Int
     var derrotas : Int
@@ -19,9 +19,9 @@ class Time {
         return vitorias * 3 + empates
     }
     
-    init(comNome nome : String, imagePath : URL, sigla : String ) {
+    init(comNome nome : String, imageName : String, sigla : String ) {
         self.nome = nome
-        self.imagem = imagePath
+        self.imagem = imageName
         self.sigla = sigla
         vitorias = 0
         derrotas = 0

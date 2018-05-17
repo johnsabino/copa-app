@@ -14,6 +14,7 @@ class MasterViewController: UITableViewController, JogoCellDelegate {
     let names = ["Ramires","João","Maria","Pedro"]
     var nameSelected : String!
     var selectedIndexPath : IndexPath?
+    var jogos = [Jogo]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,29 +22,35 @@ class MasterViewController: UITableViewController, JogoCellDelegate {
         nc.addObserver(self, selector: #selector(orientationDidChange), name: .UIDeviceOrientationDidChange , object: nil)
         showDetailViewForIpad()
         
+        for _ in 0...10 {
+            jogos.append(deveRetornarJogo())
+        }
+        
         let nib = UINib(nibName: "JogoTableViewCell", bundle: Bundle.main)
         tableView.register(nib, forCellReuseIdentifier: "cell")
 
     }
 
     func deveRetornarJogo() -> Jogo {
-        let url = URL(fileURLWithPath: "")
-        let timeCasa = Time(comNome: "Brasil", imagePath: url , sigla: "BRA")
-        let timeVisitante = Time(comNome: "ALemanha", imagePath: url, sigla: "ALE")
+        
+        let listNames = ["ad","ae","af","ar","br","pt","de","es","us","fr","jp"]
+        
+        let index1 = arc4random_uniform(UInt32(listNames.count))
+        var index2 = arc4random_uniform(UInt32(listNames.count))
+        while index2 == index1 {
+            index2 = arc4random_uniform(UInt32(listNames.count))
+        }
+        let s1 = listNames[Int(index1)]
+        let s2 = listNames[Int(index2)]
+        
+        let timeCasa = Time(comNome: s1.uppercased() , imageName: s1 , sigla: s1.uppercased())
+        let timeVisitante = Time(comNome: s2.uppercased() , imageName: s2, sigla: s2.uppercased())
         let jogo = Jogo(timeCasa: timeCasa, timeVisitante: timeVisitante, golsCasa: 0, golsVisitante: 0)
         return jogo
     }
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return names.count
-    }
-
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Nomes"
+        return jogos.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

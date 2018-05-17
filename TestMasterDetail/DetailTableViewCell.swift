@@ -10,15 +10,27 @@ import UIKit
 
 class DetailTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var lblTempoDeJogo: UILabel!
+    @IBOutlet weak var lblTempo: UILabel!
+    @IBOutlet weak var imgViewIcon: UIImageView!
+    @IBOutlet weak var imgViewFlag : UIImageView!
+    @IBOutlet weak var lblTitulo : UILabel!
+    @IBOutlet weak var lblDescricao : UILabel!
+    
+    
+    var delegate : DetailDelegate? {
+        didSet{
+           loadCell()
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         self.selectionStyle = .none
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        // Configure the view for the selected state
+    
+    func loadCell() {
+        
     }
     
 }
