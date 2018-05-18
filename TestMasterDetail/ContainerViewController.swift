@@ -8,9 +8,10 @@
 
 import UIKit
 
-class ContainerViewController: UIViewController, ContainerViewControllerDelegate, UIViewControllerTransitioningDelegate {
+class ContainerViewController: UIViewController, ContainerViewControllerDelegate, UIViewControllerTransitioningDelegate,DetailDelegate {
     
-
+    var jogo : Jogo!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if let master = self.childViewControllers.first as? MasterViewController {
@@ -19,8 +20,10 @@ class ContainerViewController: UIViewController, ContainerViewControllerDelegate
     }
     
     func navegarParaDetailView(jogo: Jogo) {
+        self.jogo = jogo
         let sb = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let detailViewController = sb.instantiateViewController(withIdentifier: "DetailViewController")
+        let detailViewController = sb.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        detailViewController.delegate = self
         
         if Device.isPortrait && !Device.isPad {
             navigationController?.pushViewController(detailViewController, animated: true)
@@ -33,5 +36,8 @@ class ContainerViewController: UIViewController, ContainerViewControllerDelegate
         navigationController?.popViewController(animated: true)
     }
     
+    func shouldReturnJogo() -> Jogo {
+        return self.jogo
+    }
 
 }

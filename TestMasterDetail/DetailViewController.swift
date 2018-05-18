@@ -8,11 +8,14 @@
 
 import UIKit
 
-class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, TableHeaderDelegate{
     
     @IBOutlet weak var tableView: UITableView!
     var name : String?
     var jogo : Jogo?
+    @IBOutlet weak var header: UIView!
+    
+    var delegate : DetailDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +23,21 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.dataSource = self
         let nib = UINib(nibName: "DetailTableViewCell", bundle: nil)
         tableView.register( nib, forCellReuseIdentifier: "detailCell")
-        
+        jogo = delegate?.shouldReturnJogo()
+        let headerView = TableHeaderDetailView.instantiateFromXib()
+        headerView?.delegate = self
+        if let headerView = headerView {
+           header.addSubview(headerView)
+        }
     }
 
+    func jogoForHeader() -> Jogo? {
+        return jogo
+    }
+    
+    func didFilterSelected(segControl: UISegmentedControl) {
+        print("filter selected \(segControl.selectedSegmentIndex)")
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
@@ -39,10 +54,6 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 180.0
     }
-    
-    
-    
-
 
 
 }

@@ -10,9 +10,12 @@ import UIKit
 
 class MasterViewController: UITableViewController, JogoCellDelegate {
     
-    var delegate : ContainerViewControllerDelegate?
-    let names = ["Ramires","João","Maria","Pedro"]
-    var nameSelected : String!
+    var delegate : ContainerViewControllerDelegate? {
+        didSet{
+            showDetailViewForIpad()
+        }
+    }
+    var jogoSelected : Jogo!
     var selectedIndexPath : IndexPath?
     var jogos = [Jogo]()
     
@@ -20,18 +23,22 @@ class MasterViewController: UITableViewController, JogoCellDelegate {
         super.viewDidLoad()
         let nc = NotificationCenter.default
         nc.addObserver(self, selector: #selector(orientationDidChange), name: .UIDeviceOrientationDidChange , object: nil)
-        showDetailViewForIpad()
         
-        for _ in 0...10 {
+        
+        for _ in 0...4 {
             jogos.append(deveRetornarJogo())
         }
-        
         let nib = UINib(nibName: "JogoTableViewCell", bundle: Bundle.main)
         tableView.register(nib, forCellReuseIdentifier: "cell")
-
     }
-
+    
+    var i = 0
     func deveRetornarJogo() -> Jogo {
+        i = i + 1
+        print(i)
+        if jogoSelected != nil {
+            return jogoSelected
+        }
         
         let listNames = ["ad","ae","af","ar","br","pt","de","es","us","fr","jp"]
         
@@ -45,7 +52,7 @@ class MasterViewController: UITableViewController, JogoCellDelegate {
         
         let timeCasa = Time(comNome: s1.uppercased() , imageName: s1 , sigla: s1.uppercased())
         let timeVisitante = Time(comNome: s2.uppercased() , imageName: s2, sigla: s2.uppercased())
-        let jogo = Jogo(timeCasa: timeCasa, timeVisitante: timeVisitante, golsCasa: 0, golsVisitante: 0)
+        let jogo = Jogo(timeCasa: timeCasa, timeVisitante: timeVisitante, golsCasa: Int(index1), golsVisitante: Int(index2))
         return jogo
     }
     
@@ -57,7 +64,7 @@ class MasterViewController: UITableViewController, JogoCellDelegate {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? JogoTableViewCell else {
             return UITableViewCell()
         }
-        cell.delegate = self
+        cell.jogo = jogos[indexPath.row]
         return cell
     }
     
@@ -66,16 +73,17 @@ class MasterViewController: UITableViewController, JogoCellDelegate {
         if  Device.isPhone && Device.isPortrait {
             tableView.deselectRow(at: indexPath, animated: true)
         }
-        nameSelected = names[indexPath.row]
-        delegate?.navegarParaDetailView(jogo: deveRetornarJogo())
+        jogoSelected = jogos[indexPath.row]
+        
+        delegate?.navegarParaDetailView(jogo: jogoSelected)
     }
     
     func showDetailViewForIpad(){
-        if (Device.isPad || Device.isLandscape) && !names.isEmpty {
+        if (Device.isPad || Device.isLandscape) && !jogos.isEmpty {
             selectedIndexPath = IndexPath(row: 0, section: 0)
-            nameSelected = names.first
+            jogoSelected = jogos.first
             tableView.selectRow(at: selectedIndexPath, animated: false, scrollPosition: .top)
-            delegate?.navegarParaDetailView(jogo: deveRetornarJogo())
+            delegate?.navegarParaDetailView(jogo: jogoSelected)
         }
     }
     
@@ -88,6 +96,13 @@ class MasterViewController: UITableViewController, JogoCellDelegate {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80.0
     }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        print(Device.isPortrait)
+        print(Device.isPhone)
+    }
+    
+
 
 }
 

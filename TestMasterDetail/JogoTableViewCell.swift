@@ -22,7 +22,7 @@ class JogoTableViewCell: UITableViewCell {
     
     @IBOutlet weak var detailLabel: UILabel!
     
-    var delegate : JogoCellDelegate? {
+    var jogo : Jogo? {
         didSet{
             atualizaView()
         }
@@ -49,10 +49,20 @@ class JogoTableViewCell: UITableViewCell {
     }
     
     func atualizaView() {
-        if let jogo = delegate?.deveRetornarJogo() {
+        if let jogo = jogo {
             golsTimeCasa.text = String(jogo.golsCasa)
             golsTimeVisitante.text = String(jogo.golsVisitante)
             
+            let timeCasa = jogo.timeCasa
+            let visitante = jogo.timeVisitante
+            
+            imgTimeCasa.image = UIImage(named: timeCasa.imagem)
+            imgTimeVisitante.image = UIImage(named: visitante.imagem)
+            
+            siglaTimeCasa.text = timeCasa.sigla
+            siglaTimeVisitante.text = visitante.sigla
+    
+            detailLabel.text = "34'"
         }
     }
 }

@@ -14,6 +14,9 @@
 		BE02312B20A9D037004767CB /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE02312A20A9D036004767CB /* MasterViewController.swift */; };
 		BE02312D20A9D5D6004767CB /* PrimaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE02312C20A9D5D6004767CB /* PrimaryViewController.swift */; };
 		BE02313120A9D8A5004767CB /* DetailDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE02313020A9D8A5004767CB /* DetailDelegate.swift */; };
+		BE499EA920AEF1D2002955BB /* TableHeaderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE499EA720AEF1D2002955BB /* TableHeaderDetailView.swift */; };
+		BE499EAA20AEF1D2002955BB /* TableHeaderDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE499EA820AEF1D2002955BB /* TableHeaderDetail.xib */; };
+		BE499EAE20AEFC01002955BB /* TableHeaderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE499EAD20AEFC01002955BB /* TableHeaderDelegate.swift */; };
 		BE5F38C420AB1C0600E22602 /* JogoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F38C220AB1C0600E22602 /* JogoTableViewCell.swift */; };
 		BE5F38C520AB1C0600E22602 /* JogoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE5F38C320AB1C0600E22602 /* JogoTableViewCell.xib */; };
 		BE5F38C820AB22C800E22602 /* JogoCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F38C720AB22C800E22602 /* JogoCellDelegate.swift */; };
@@ -37,6 +40,9 @@
 		BE02312A20A9D036004767CB /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		BE02312C20A9D5D6004767CB /* PrimaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryViewController.swift; sourceTree = "<group>"; };
 		BE02313020A9D8A5004767CB /* DetailDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDelegate.swift; sourceTree = "<group>"; };
+		BE499EA720AEF1D2002955BB /* TableHeaderDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHeaderDetailView.swift; sourceTree = "<group>"; };
+		BE499EA820AEF1D2002955BB /* TableHeaderDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableHeaderDetail.xib; sourceTree = "<group>"; };
+		BE499EAD20AEFC01002955BB /* TableHeaderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHeaderDelegate.swift; sourceTree = "<group>"; };
 		BE5F38C220AB1C0600E22602 /* JogoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogoTableViewCell.swift; sourceTree = "<group>"; };
 		BE5F38C320AB1C0600E22602 /* JogoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JogoTableViewCell.xib; sourceTree = "<group>"; };
 		BE5F38C720AB22C800E22602 /* JogoCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogoCellDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +89,7 @@
 				BE5F38C620AB1C1600E22602 /* jogoViewCell */,
 				BE5F38BB20AB19B900E22602 /* masterView */,
 				BE5F38BA20AB199500E22602 /* detailView */,
+				BE499EA220AEF126002955BB /* tableHeaderDetail */,
 				BE02311820A9CBFD004767CB /* AppDelegate.swift */,
 				BE02311C20A9CBFD004767CB /* Main.storyboard */,
 				BEC0010A20ADAA4200FA9141 /* ContainerViewControllerDelegate.swift */,
@@ -95,6 +102,16 @@
 				BEC0010820ADA37200FA9141 /* ContainerViewController.swift */,
 			);
 			path = TestMasterDetail;
+			sourceTree = "<group>";
+		};
+		BE499EA220AEF126002955BB /* tableHeaderDetail */ = {
+			isa = PBXGroup;
+			children = (
+				BE499EA720AEF1D2002955BB /* TableHeaderDetailView.swift */,
+				BE499EA820AEF1D2002955BB /* TableHeaderDetail.xib */,
+				BE499EAD20AEFC01002955BB /* TableHeaderDelegate.swift */,
+			);
+			path = tableHeaderDetail;
 			sourceTree = "<group>";
 		};
 		BE5F38BA20AB199500E22602 /* detailView */ = {
@@ -187,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE5F38C520AB1C0600E22602 /* JogoTableViewCell.xib in Resources */,
+				BE499EAA20AEF1D2002955BB /* TableHeaderDetail.xib in Resources */,
 				BE6C255C20AC5C4A003EE702 /* DetailTableViewCell.xib in Resources */,
 				BE02312320A9CBFD004767CB /* LaunchScreen.storyboard in Resources */,
 				BE02312020A9CBFD004767CB /* Assets.xcassets in Resources */,
@@ -205,9 +223,11 @@
 				BE02313120A9D8A5004767CB /* DetailDelegate.swift in Sources */,
 				BE02312D20A9D5D6004767CB /* PrimaryViewController.swift in Sources */,
 				BE5F38C820AB22C800E22602 /* JogoCellDelegate.swift in Sources */,
+				BE499EAE20AEFC01002955BB /* TableHeaderDelegate.swift in Sources */,
 				BEC0010920ADA37200FA9141 /* ContainerViewController.swift in Sources */,
 				F1DC731320AA02C300525AB0 /* DetailViewController.swift in Sources */,
 				BEC0010B20ADAA4200FA9141 /* ContainerViewControllerDelegate.swift in Sources */,
+				BE499EA920AEF1D2002955BB /* TableHeaderDetailView.swift in Sources */,
 				BE5F38C420AB1C0600E22602 /* JogoTableViewCell.swift in Sources */,
 				BE5F38CC20AB241C00E22602 /* Jogo.swift in Sources */,
 				BE5F38CA20AB234C00E22602 /* Time.swift in Sources */,

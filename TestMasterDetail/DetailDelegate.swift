@@ -10,5 +10,5 @@ import Foundation
 
 
 protocol DetailDelegate {
-    func shouldReturName() -> String
+    func shouldReturnJogo() -> Jogo
 }
