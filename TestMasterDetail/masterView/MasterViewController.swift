@@ -87,7 +87,7 @@ class MasterViewController: UITableViewController, JogoCellDelegate {
     }
     
     @objc func orientationDidChange(){
-        if Device.isLandscape && Device.isPhone {
+        if Device.isLandscape && !Device.isSmall(screen: view){
             delegate?.popViewController()
         }
     }

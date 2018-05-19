@@ -24,17 +24,17 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IZF-Up-tuh">
-                                <rect key="frame" x="0.0" y="64" width="375" height="200"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="210"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="IZF-Up-tuh" firstAttribute="height" secondItem="2C5-r8-7lb" secondAttribute="height" multiplier="0.3" id="7Ro-vv-FCh"/>
+                            <constraint firstItem="IZF-Up-tuh" firstAttribute="height" secondItem="2C5-r8-7lb" secondAttribute="height" multiplier="0.3" constant="9.9000000000000057" id="7Ro-vv-FCh"/>
                             <constraint firstItem="IZF-Up-tuh" firstAttribute="leading" secondItem="uci-fU-bu8" secondAttribute="leading" id="BZu-Vj-nEF"/>
                             <constraint firstItem="uci-fU-bu8" firstAttribute="trailing" secondItem="IZF-Up-tuh" secondAttribute="trailing" id="CaN-dn-9ok"/>
                             <constraint firstItem="5J0-Da-PQL" firstAttribute="leading" secondItem="uci-fU-bu8" secondAttribute="leading" id="KE6-eJ-I0Z"/>
-                            <constraint firstItem="5J0-Da-PQL" firstAttribute="top" secondItem="IZF-Up-tuh" secondAttribute="bottom" id="MTx-aA-MJE"/>
+                            <constraint firstItem="5J0-Da-PQL" firstAttribute="top" secondItem="IZF-Up-tuh" secondAttribute="bottom" constant="-10" id="MTx-aA-MJE"/>
                             <constraint firstItem="5J0-Da-PQL" firstAttribute="trailing" secondItem="uci-fU-bu8" secondAttribute="trailing" id="OKh-lh-61m"/>
                             <constraint firstItem="5J0-Da-PQL" firstAttribute="bottom" secondItem="uci-fU-bu8" secondAttribute="bottom" id="ee1-dj-5Df"/>
                             <constraint firstItem="IZF-Up-tuh" firstAttribute="top" secondItem="uci-fU-bu8" secondAttribute="top" id="vxX-bD-kck"/>

@@ -29,6 +29,8 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         if let headerView = headerView {
            header.addSubview(headerView)
         }
+        
+        self.title = "Semi-Final"
     }
 
     func jogoForHeader() -> Jogo? {

@@ -30,6 +30,16 @@ class TableHeaderDetailView: UIView {
             atualizaView()
         }
     }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        let nc = NotificationCenter.default
+        nc.addObserver(self, selector: #selector(orientationDidChange), name: .UIDeviceOrientationDidChange , object: nil)
+    }
+    
+    @objc func orientationDidChange(){
+        
+    }
 
     func atualizaView() {
         let jogo = delegate?.jogoForHeader()
@@ -58,4 +68,5 @@ class TableHeaderDetailView: UIView {
         delegate?.didFilterSelected(segControl: sender)
     }
     
+
 }
