@@ -25,17 +25,16 @@ class MasterViewController: UITableViewController, JogoCellDelegate {
         nc.addObserver(self, selector: #selector(orientationDidChange), name: .UIDeviceOrientationDidChange , object: nil)
         
         
-        for _ in 0...4 {
+        for _ in 0...14 {
             jogos.append(deveRetornarJogo())
         }
         let nib = UINib(nibName: "JogoTableViewCell", bundle: Bundle.main)
         tableView.register(nib, forCellReuseIdentifier: "cell")
+        navigationController?.navigationBar.barTintColor = .blue
+    
     }
     
-    var i = 0
     func deveRetornarJogo() -> Jogo {
-        i = i + 1
-        print(i)
         if jogoSelected != nil {
             return jogoSelected
         }

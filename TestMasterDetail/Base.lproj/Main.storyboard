@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NoW-Mq-7eL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NoW-Mq-7eL">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,19 +20,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5J0-Da-PQL">
-                                <rect key="frame" x="0.0" y="220" width="375" height="447"/>
+                                <rect key="frame" x="0.0" y="264" width="375" height="403"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IZF-Up-tuh">
-                                <rect key="frame" x="0.0" y="20" width="375" height="200"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="1IO-LB-f2F"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="IZF-Up-tuh" firstAttribute="height" secondItem="2C5-r8-7lb" secondAttribute="height" multiplier="0.3" id="7Ro-vv-FCh"/>
                             <constraint firstItem="IZF-Up-tuh" firstAttribute="leading" secondItem="uci-fU-bu8" secondAttribute="leading" id="BZu-Vj-nEF"/>
                             <constraint firstItem="uci-fU-bu8" firstAttribute="trailing" secondItem="IZF-Up-tuh" secondAttribute="trailing" id="CaN-dn-9ok"/>
                             <constraint firstItem="5J0-Da-PQL" firstAttribute="leading" secondItem="uci-fU-bu8" secondAttribute="leading" id="KE6-eJ-I0Z"/>
@@ -50,13 +49,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QRy-y7-0Jf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="452" y="1242.7286356821589"/>
+            <point key="canvasLocation" x="-937" y="931"/>
         </scene>
-        <!--passado-->
+        <!--próximos-->
         <scene sceneID="PLU-ZC-qD2">
             <objects>
                 <navigationController id="RI2-UW-gO4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="passado" id="Boi-nf-lvL"/>
+                    <tabBarItem key="tabBarItem" title="próximos" image="future" id="Boi-nf-lvL"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xth-mX-Hyq">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -97,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D8s-Bq-neg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="854" y="-400"/>
+            <point key="canvasLocation" x="854" y="-401"/>
         </scene>
         <!--Master-->
         <scene sceneID="UQv-a3-Rpq">
@@ -143,19 +142,16 @@
                         <viewLayoutGuide key="safeArea" id="oOZ-sD-nS7"/>
                     </view>
                     <navigationItem key="navigationItem" title="Ao Vivo" id="oz4-qv-XQz"/>
-                    <connections>
-                        <segue destination="kJx-fy-0oL" kind="showDetail" identifier="detail" id="RKa-34-cul"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="etv-2T-aaE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="854" y="-1154"/>
+            <point key="canvasLocation" x="934" y="-1154"/>
         </scene>
         <!--ao vivo-->
         <scene sceneID="ZHK-DT-U5F">
             <objects>
                 <navigationController id="eJr-NX-56H" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ao vivo" id="3Mm-Ka-1Nl"/>
+                    <tabBarItem key="tabBarItem" title="ao vivo" image="live" id="3Mm-Ka-1Nl"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5zs-r4-4Sx">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -202,8 +198,11 @@
             <point key="canvasLocation" x="-786" y="-571"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="future" width="24" height="24"/>
+        <image name="live" width="32" height="18"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="uYh-iR-agx"/>
-        <segue reference="RKa-34-cul"/>
+        <segue reference="vcm-o5-Jn3"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -17,6 +17,14 @@ class ContainerViewController: UIViewController, ContainerViewControllerDelegate
         if let master = self.childViewControllers.first as? MasterViewController {
             master.delegate = self
         }
+        let navBar = navigationController?.navigationBar
+        navBar?.barTintColor = AppColors.blue
+        let atributes = [NSAttributedStringKey.foregroundColor: AppColors.white]
+        navBar?.titleTextAttributes = atributes
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     func navegarParaDetailView(jogo: Jogo) {

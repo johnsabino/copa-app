@@ -27,6 +27,7 @@
 		BEC0010920ADA37200FA9141 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC0010820ADA37200FA9141 /* ContainerViewController.swift */; };
 		BEC0010B20ADAA4200FA9141 /* ContainerViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC0010A20ADAA4200FA9141 /* ContainerViewControllerDelegate.swift */; };
 		BEC0010D20ADBF8D00FA9141 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC0010C20ADBF8D00FA9141 /* Device.swift */; };
+		F1C5407C20AF31B000DB5DFC /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C5407B20AF31B000DB5DFC /* AppColors.swift */; };
 		F1DC731320AA02C300525AB0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DC731120AA02C300525AB0 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		BEC0010820ADA37200FA9141 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		BEC0010A20ADAA4200FA9141 /* ContainerViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewControllerDelegate.swift; sourceTree = "<group>"; };
 		BEC0010C20ADBF8D00FA9141 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		F1C5407B20AF31B000DB5DFC /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		F1DC731120AA02C300525AB0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,20 +88,19 @@
 		BE02311720A9CBFD004767CB /* TestMasterDetail */ = {
 			isa = PBXGroup;
 			children = (
+				F1C5407A20AF311000DB5DFC /* models */,
+				F1C5407920AF30E500DB5DFC /* containerView */,
 				BE5F38C620AB1C1600E22602 /* jogoViewCell */,
 				BE5F38BB20AB19B900E22602 /* masterView */,
 				BE5F38BA20AB199500E22602 /* detailView */,
 				BE499EA220AEF126002955BB /* tableHeaderDetail */,
 				BE02311820A9CBFD004767CB /* AppDelegate.swift */,
 				BE02311C20A9CBFD004767CB /* Main.storyboard */,
-				BEC0010A20ADAA4200FA9141 /* ContainerViewControllerDelegate.swift */,
 				BE02311F20A9CBFD004767CB /* Assets.xcassets */,
 				BE02312120A9CBFD004767CB /* LaunchScreen.storyboard */,
 				BE02312420A9CBFD004767CB /* Info.plist */,
 				BE02312C20A9D5D6004767CB /* PrimaryViewController.swift */,
-				BE5F38C920AB234C00E22602 /* Time.swift */,
-				BE5F38CB20AB241C00E22602 /* Jogo.swift */,
-				BEC0010820ADA37200FA9141 /* ContainerViewController.swift */,
+				F1C5407B20AF31B000DB5DFC /* AppColors.swift */,
 			);
 			path = TestMasterDetail;
 			sourceTree = "<group>";
@@ -142,6 +143,24 @@
 				BE5F38C720AB22C800E22602 /* JogoCellDelegate.swift */,
 			);
 			name = jogoViewCell;
+			sourceTree = "<group>";
+		};
+		F1C5407920AF30E500DB5DFC /* containerView */ = {
+			isa = PBXGroup;
+			children = (
+				BEC0010820ADA37200FA9141 /* ContainerViewController.swift */,
+				BEC0010A20ADAA4200FA9141 /* ContainerViewControllerDelegate.swift */,
+			);
+			name = containerView;
+			sourceTree = "<group>";
+		};
+		F1C5407A20AF311000DB5DFC /* models */ = {
+			isa = PBXGroup;
+			children = (
+				BE5F38C920AB234C00E22602 /* Time.swift */,
+				BE5F38CB20AB241C00E22602 /* Jogo.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +247,7 @@
 				F1DC731320AA02C300525AB0 /* DetailViewController.swift in Sources */,
 				BEC0010B20ADAA4200FA9141 /* ContainerViewControllerDelegate.swift in Sources */,
 				BE499EA920AEF1D2002955BB /* TableHeaderDetailView.swift in Sources */,
+				F1C5407C20AF31B000DB5DFC /* AppColors.swift in Sources */,
 				BE5F38C420AB1C0600E22602 /* JogoTableViewCell.swift in Sources */,
 				BE5F38CC20AB241C00E22602 /* Jogo.swift in Sources */,
 				BE5F38CA20AB234C00E22602 /* Time.swift in Sources */,
