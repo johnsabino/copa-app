@@ -24,5 +24,10 @@ struct Device {
     static var isLandscape : Bool {
         return UIApplication.shared.statusBarOrientation.isLandscape
     }
+    
+    static func isSmall(screen : UIView) -> Bool{
+        let result =  Device.isPortrait && !Device.isPad
+        return result || (500...600).contains(screen.bounds.size.width)
+    }
 } 
 

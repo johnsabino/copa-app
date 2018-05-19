@@ -19,6 +19,7 @@ class ContainerViewController: UIViewController, ContainerViewControllerDelegate
         }
         let navBar = navigationController?.navigationBar
         navBar?.barTintColor = AppColors.blue
+        navBar?.tintColor = AppColors.white
         let atributes = [NSAttributedStringKey.foregroundColor: AppColors.white]
         navBar?.titleTextAttributes = atributes
     }
@@ -33,11 +34,14 @@ class ContainerViewController: UIViewController, ContainerViewControllerDelegate
         let detailViewController = sb.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
         detailViewController.delegate = self
         
-        if Device.isPortrait && !Device.isPad {
+        var isSmallScreen = Device.isSmall(screen: view)
+        
+        if isSmallScreen {
             navigationController?.pushViewController(detailViewController, animated: true)
         }else{
-          splitViewController?.showDetailViewController(detailViewController, sender: nil)
+            splitViewController?.showDetailViewController(detailViewController, sender: nil)
         }
+    
     }
     
     func popViewController() {

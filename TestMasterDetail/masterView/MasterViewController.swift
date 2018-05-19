@@ -95,13 +95,6 @@ class MasterViewController: UITableViewController, JogoCellDelegate {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80.0
     }
-    
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        print(Device.isPortrait)
-        print(Device.isPhone)
-    }
-    
-
 
 }
 
