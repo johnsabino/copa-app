@@ -30,8 +30,20 @@ class MasterViewController: UITableViewController, JogoCellDelegate {
         }
         let nib = UINib(nibName: "JogoTableViewCell", bundle: Bundle.main)
         tableView.register(nib, forCellReuseIdentifier: "cell")
-        navigationController?.navigationBar.barTintColor = .blue
+        
+        viewWillAppear(true)
+    }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let bar = navigationController?.navigationBar
+        
+        bar?.barTintColor = .blue
+        
+        if bar?.backgroundImage(for: UIBarMetrics.default) != nil {
+            bar?.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        }
+        
     }
     
     func deveRetornarJogo() -> Jogo {

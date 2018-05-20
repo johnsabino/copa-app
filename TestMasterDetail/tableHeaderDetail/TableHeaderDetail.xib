@@ -30,8 +30,8 @@
                                             <rect key="frame" x="22" y="8" width="74.5" height="59"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FfR-gN-iBY">
-                                            <rect key="frame" x="8" y="72" width="102.5" height="17"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <rect key="frame" x="8" y="72" width="102.5" height="23.5"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
                                             <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -51,26 +51,26 @@
                                     <rect key="frame" x="118.5" y="0.0" width="122" height="131.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhX-oz-syA">
-                                            <rect key="frame" x="97" y="24.5" width="22" height="27.5"/>
+                                            <rect key="frame" x="95" y="23.5" width="24" height="27.5"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="22" id="bx5-df-Rce"/>
+                                                <constraint firstAttribute="width" constant="24" id="bx5-df-Rce"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="20"/>
                                             <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XN0-fg-uyR">
-                                            <rect key="frame" x="0.0" y="24.5" width="22" height="27.5"/>
+                                            <rect key="frame" x="0.0" y="24.5" width="24" height="27.5"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="22" id="cKh-In-61k"/>
+                                                <constraint firstAttribute="width" constant="24" id="cKh-In-61k"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="20"/>
                                             <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RE9-xY-NaX">
-                                            <rect key="frame" x="38" y="24" width="43" height="27.5"/>
-                                            <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
+                                            <rect key="frame" x="32" y="24.5" width="55" height="27.5"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="20"/>
                                             <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -78,10 +78,10 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstItem="XN0-fg-uyR" firstAttribute="leading" secondItem="d0J-R0-pEx" secondAttribute="leading" id="8MV-2Z-dOF"/>
-                                        <constraint firstItem="JhX-oz-syA" firstAttribute="leading" secondItem="RE9-xY-NaX" secondAttribute="trailing" constant="16" id="Ruq-SJ-A3S"/>
+                                        <constraint firstItem="JhX-oz-syA" firstAttribute="leading" secondItem="RE9-xY-NaX" secondAttribute="trailing" constant="8" id="Ruq-SJ-A3S"/>
                                         <constraint firstItem="RE9-xY-NaX" firstAttribute="centerY" secondItem="XN0-fg-uyR" secondAttribute="centerY" id="XEG-dy-7XL"/>
                                         <constraint firstAttribute="trailing" secondItem="JhX-oz-syA" secondAttribute="trailing" constant="3" id="g5D-v3-I2N"/>
-                                        <constraint firstItem="RE9-xY-NaX" firstAttribute="leading" secondItem="XN0-fg-uyR" secondAttribute="trailing" constant="16" id="xLS-yA-jde"/>
+                                        <constraint firstItem="RE9-xY-NaX" firstAttribute="leading" secondItem="XN0-fg-uyR" secondAttribute="trailing" constant="8" id="xLS-yA-jde"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TPg-mB-kRk">
@@ -89,7 +89,7 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOe-Rc-GtV">
                                             <rect key="frame" x="8" y="71.5" width="102.5" height="19.5"/>
-                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="14"/>
                                             <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>

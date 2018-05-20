@@ -19,6 +19,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let bar = navigationController?.navigationBar
         tableView.delegate = self
         tableView.dataSource = self
         let nib = UINib(nibName: "DetailTableViewCell", bundle: nil)
@@ -27,10 +28,44 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let headerView = TableHeaderDetailView.instantiateFromXib()
         headerView?.delegate = self
         if let headerView = headerView {
-           header.addSubview(headerView)
+            self.title = "Semi-Final"
+            
+            let gradiente = CAGradientLayer()
+            let width = view.frame.size.width
+            let height = header.frame.size.height
+            gradiente.frame = CGRect(x: 0, y: 0, width: width, height: height)
+
+            let c1 = colorRGB(0, 206, 0, alpha: 0.8).cgColor
+            let c2 = colorRGB(0, 148, 0, alpha: 0.8).cgColor
+            
+            gradiente.colors = [c1,c2]
+            gradiente.startPoint = CGPoint(x: 1, y: 0.5)
+            gradiente.endPoint = CGPoint(x: 0, y: 0.5)
+            headerView.backgroundColor = .clear
+            
+            
+            
+            let g1 = CAGradientLayer()
+            
+            g1.frame = bar?.bounds ?? CGRect(x: 0, y: 0, width: 0, height: 0)
+            g1.colors = [c1,c2]
+            g1.startPoint = CGPoint(x: 1, y: 0.5)
+            g1.endPoint = CGPoint(x: 0, y: 0.5)
+            headerView.backgroundColor = .clear
+            bar?.setBackgroundImage(g1.image, for: UIBarMetrics.default)
+        
+            bar?.barTintColor = .white
+            bar?.shadowImage = UIImage()
+            bar?.layer.shadowOpacity = 0
+            bar?.isTranslucent = false
+            header.backgroundColor = UIColor(patternImage: gradiente.image)
+            header.addSubview(headerView)
         }
         
-        self.title = "Semi-Final"
+    }
+    
+    func colorRGB(_ red : CGFloat , _ green : CGFloat, _ blue : CGFloat, alpha : CGFloat)-> UIColor{
+        return UIColor(red: red/255.0, green: green/255.0, blue: blue/255.0, alpha: alpha)
     }
 
     func jogoForHeader() -> Jogo? {
@@ -58,4 +93,16 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
 
 
+}
+
+
+extension CAGradientLayer {
+    
+    var image : UIImage {
+        UIGraphicsBeginImageContext(self.frame.size)
+        self.render(in: UIGraphicsGetCurrentContext()!)
+        let img = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return img!
+    }
 }

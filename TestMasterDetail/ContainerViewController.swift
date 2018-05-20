@@ -17,6 +17,10 @@ class ContainerViewController: UIViewController, ContainerViewControllerDelegate
         if let master = self.childViewControllers.first as? MasterViewController {
             master.delegate = self
         }
+        
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
         let navBar = navigationController?.navigationBar
         navBar?.barTintColor = AppColors.blue
         navBar?.tintColor = AppColors.white
@@ -34,7 +38,7 @@ class ContainerViewController: UIViewController, ContainerViewControllerDelegate
         let detailViewController = sb.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
         detailViewController.delegate = self
         
-        var isSmallScreen = Device.isSmall(screen: view)
+        let isSmallScreen = Device.isSmall(screen: view)
         
         if isSmallScreen {
             navigationController?.pushViewController(detailViewController, animated: true)
