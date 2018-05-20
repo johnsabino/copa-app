@@ -10,7 +10,7 @@ import UIKit
 
 class TableHeaderDetailView: UIView {
 
-    @IBOutlet weak var lblTitulo: UILabel!
+    @IBOutlet weak var lblTempo: UILabel!
     
     @IBOutlet weak var imgTimeCasa: UIImageView!
     @IBOutlet weak var imgTimeVisitante: UIImageView!
@@ -54,6 +54,8 @@ class TableHeaderDetailView: UIView {
         
         lblSiglaCasa.text = timeCasa?.sigla
         lblSiglaVisitante.text = timeVisitante?.sigla
+        lblTempo.layer.masksToBounds = true
+        lblTempo.layer.cornerRadius = 10
     }
     
     class func instantiateFromXib() -> TableHeaderDetailView? {

@@ -37,12 +37,9 @@ class MasterViewController: UITableViewController, JogoCellDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let bar = navigationController?.navigationBar
-        
-        bar?.barTintColor = .blue
-        
-        if bar?.backgroundImage(for: UIBarMetrics.default) != nil {
-            bar?.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        }
+        let tab = tabBarController?.tabBar
+        bar?.barTintColor = AppColors.green
+        tab?.tintColor = AppColors.green
         
     }
     

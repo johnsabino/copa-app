@@ -92,7 +92,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jGN-AB-6fU"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Passado" id="Fem-rE-yM2"/>
+                    <navigationItem key="navigationItem" title="Passado" id="Fem-rE-yM2">
+                        <barButtonItem key="backBarButtonItem" title="voltar" id="gSd-jj-gZG"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D8s-Bq-neg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -141,7 +143,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oOZ-sD-nS7"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Ao Vivo" id="oz4-qv-XQz"/>
+                    <navigationItem key="navigationItem" title="Ao Vivo" id="oz4-qv-XQz">
+                        <barButtonItem key="backBarButtonItem" title="voltar" id="4n7-rY-sXq"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="etv-2T-aaE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -204,6 +208,6 @@
         <image name="live" width="32" height="18"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="vcm-o5-Jn3"/>
+        <segue reference="uYh-iR-agx"/>
     </inferredMetricsTieBreakers>
 </document>
