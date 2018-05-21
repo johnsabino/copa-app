@@ -33,7 +33,7 @@ class JogoTableViewCell: UITableViewCell {
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         configuraImageViews(imgTimeCasa, imgTimeVisitante )
         imgTimeCasa.image = #imageLiteral(resourceName: "brasil")
-        imgTimeVisitante.image = #imageLiteral(resourceName: "alemanha")
+        imgTimeVisitante.image = #imageLiteral(resourceName: "ar")
     }
     
     func configuraImageViews(_ imageViews : UIImageView ...){

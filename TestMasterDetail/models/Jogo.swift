@@ -9,9 +9,10 @@
 import Foundation
 
 
-struct Jogo {
+struct Jogo : Decodable {
     let timeCasa : Time
     let timeVisitante : Time
     var golsCasa : Int
     var golsVisitante : Int
+    var tipo : TipoJogo
 }

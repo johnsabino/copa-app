@@ -17,20 +17,24 @@ class MasterViewController: UITableViewController, JogoCellDelegate {
     }
     var jogoSelected : Jogo!
     var selectedIndexPath : IndexPath?
-    var jogos = [Jogo]()
-    
+    var jogos = [Jogo]() {
+        didSet{
+            self.tableView.reloadData()
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         let nc = NotificationCenter.default
         nc.addObserver(self, selector: #selector(orientationDidChange), name: .UIDeviceOrientationDidChange , object: nil)
-        
-        
-        for _ in 0...14 {
-            jogos.append(deveRetornarJogo())
-        }
+    
         let nib = UINib(nibName: "JogoTableViewCell", bundle: Bundle.main)
         tableView.register(nib, forCellReuseIdentifier: "cell")
-        
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(loadJogos), for: .valueChanged)
+        tableView.addSubview(refreshControl!)
+        refreshControl?.attributedTitle = NSAttributedString(string: "buscando jogos...")
+        refreshControl?.beginRefreshing()
         viewWillAppear(true)
     }
     
@@ -40,28 +44,25 @@ class MasterViewController: UITableViewController, JogoCellDelegate {
         let tab = tabBarController?.tabBar
         bar?.barTintColor = AppColors.green
         tab?.tintColor = AppColors.green
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+       loadJogos()
+    }
+    
+    @objc func loadJogos() {
+        let types : [TipoJogo] = [.live,.future,.past]
+        let index = tabBarController?.selectedIndex ?? 0
+        JogoDAO.getJogosAsync { (jogos, error) in
+            if let jogos = jogos {
+                self.jogos = jogos.filter {$0.tipo == types[index]}
+                self.refreshControl?.endRefreshing()
+            }
+        }
     }
     
     func deveRetornarJogo() -> Jogo {
-        if jogoSelected != nil {
-            return jogoSelected
-        }
-        
-        let listNames = ["ad","ae","af","ar","br","pt","de","es","us","fr","jp"]
-        
-        let index1 = arc4random_uniform(UInt32(listNames.count))
-        var index2 = arc4random_uniform(UInt32(listNames.count))
-        while index2 == index1 {
-            index2 = arc4random_uniform(UInt32(listNames.count))
-        }
-        let s1 = listNames[Int(index1)]
-        let s2 = listNames[Int(index2)]
-        
-        let timeCasa = Time(comNome: s1.uppercased() , imageName: s1 , sigla: s1.uppercased())
-        let timeVisitante = Time(comNome: s2.uppercased() , imageName: s2, sigla: s2.uppercased())
-        let jogo = Jogo(timeCasa: timeCasa, timeVisitante: timeVisitante, golsCasa: Int(index1), golsVisitante: Int(index2))
-        return jogo
+        return jogoSelected
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

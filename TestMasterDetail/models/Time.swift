@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class Time {
+class Time : Decodable {
     let nome : String
     let imagem : String
     let sigla : String

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		BE02311920A9CBFD004767CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE02311820A9CBFD004767CB /* AppDelegate.swift */; };
 		BE02311E20A9CBFD004767CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE02311C20A9CBFD004767CB /* Main.storyboard */; };
-		BE02312020A9CBFD004767CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE02311F20A9CBFD004767CB /* Assets.xcassets */; };
 		BE02312320A9CBFD004767CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE02312120A9CBFD004767CB /* LaunchScreen.storyboard */; };
 		BE02312B20A9D037004767CB /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE02312A20A9D036004767CB /* MasterViewController.swift */; };
 		BE02312D20A9D5D6004767CB /* PrimaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE02312C20A9D5D6004767CB /* PrimaryViewController.swift */; };
@@ -27,6 +26,9 @@
 		BEC0010920ADA37200FA9141 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC0010820ADA37200FA9141 /* ContainerViewController.swift */; };
 		BEC0010B20ADAA4200FA9141 /* ContainerViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC0010A20ADAA4200FA9141 /* ContainerViewControllerDelegate.swift */; };
 		BEC0010D20ADBF8D00FA9141 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC0010C20ADBF8D00FA9141 /* Device.swift */; };
+		F1C0DE9220B1D83F00C9DB93 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C0DE9120B1D83F00C9DB93 /* Router.swift */; };
+		F1C0DE9420B1F15A00C9DB93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1C0DE9320B1F15A00C9DB93 /* Assets.xcassets */; };
+		F1C0DE9720B204CC00C9DB93 /* JogoDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C0DE9620B204CC00C9DB93 /* JogoDAO.swift */; };
 		F1C5407C20AF31B000DB5DFC /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C5407B20AF31B000DB5DFC /* AppColors.swift */; };
 		F1DC731320AA02C300525AB0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DC731120AA02C300525AB0 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
@@ -35,7 +37,6 @@
 		BE02311520A9CBFD004767CB /* TestMasterDetail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestMasterDetail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE02311820A9CBFD004767CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE02311D20A9CBFD004767CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BE02311F20A9CBFD004767CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE02312220A9CBFD004767CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE02312420A9CBFD004767CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE02312A20A9D036004767CB /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +55,9 @@
 		BEC0010820ADA37200FA9141 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		BEC0010A20ADAA4200FA9141 /* ContainerViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewControllerDelegate.swift; sourceTree = "<group>"; };
 		BEC0010C20ADBF8D00FA9141 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		F1C0DE9120B1D83F00C9DB93 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		F1C0DE9320B1F15A00C9DB93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F1C0DE9620B204CC00C9DB93 /* JogoDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogoDAO.swift; sourceTree = "<group>"; };
 		F1C5407B20AF31B000DB5DFC /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		F1DC731120AA02C300525AB0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +92,8 @@
 		BE02311720A9CBFD004767CB /* TestMasterDetail */ = {
 			isa = PBXGroup;
 			children = (
+				F1C0DE9520B204A400C9DB93 /* dao */,
+				F1C0DE9320B1F15A00C9DB93 /* Assets.xcassets */,
 				F1C5407A20AF311000DB5DFC /* models */,
 				F1C5407920AF30E500DB5DFC /* containerView */,
 				BE5F38C620AB1C1600E22602 /* jogoViewCell */,
@@ -96,11 +102,11 @@
 				BE499EA220AEF126002955BB /* tableHeaderDetail */,
 				BE02311820A9CBFD004767CB /* AppDelegate.swift */,
 				BE02311C20A9CBFD004767CB /* Main.storyboard */,
-				BE02311F20A9CBFD004767CB /* Assets.xcassets */,
 				BE02312120A9CBFD004767CB /* LaunchScreen.storyboard */,
 				BE02312420A9CBFD004767CB /* Info.plist */,
 				BE02312C20A9D5D6004767CB /* PrimaryViewController.swift */,
 				F1C5407B20AF31B000DB5DFC /* AppColors.swift */,
+				F1C0DE9120B1D83F00C9DB93 /* Router.swift */,
 			);
 			path = TestMasterDetail;
 			sourceTree = "<group>";
@@ -143,6 +149,14 @@
 				BE5F38C720AB22C800E22602 /* JogoCellDelegate.swift */,
 			);
 			name = jogoViewCell;
+			sourceTree = "<group>";
+		};
+		F1C0DE9520B204A400C9DB93 /* dao */ = {
+			isa = PBXGroup;
+			children = (
+				F1C0DE9620B204CC00C9DB93 /* JogoDAO.swift */,
+			);
+			name = dao;
 			sourceTree = "<group>";
 		};
 		F1C5407920AF30E500DB5DFC /* containerView */ = {
@@ -226,7 +240,7 @@
 				BE499EAA20AEF1D2002955BB /* TableHeaderDetail.xib in Resources */,
 				BE6C255C20AC5C4A003EE702 /* DetailTableViewCell.xib in Resources */,
 				BE02312320A9CBFD004767CB /* LaunchScreen.storyboard in Resources */,
-				BE02312020A9CBFD004767CB /* Assets.xcassets in Resources */,
+				F1C0DE9420B1F15A00C9DB93 /* Assets.xcassets in Resources */,
 				BE02311E20A9CBFD004767CB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,7 +261,9 @@
 				F1DC731320AA02C300525AB0 /* DetailViewController.swift in Sources */,
 				BEC0010B20ADAA4200FA9141 /* ContainerViewControllerDelegate.swift in Sources */,
 				BE499EA920AEF1D2002955BB /* TableHeaderDetailView.swift in Sources */,
+				F1C0DE9720B204CC00C9DB93 /* JogoDAO.swift in Sources */,
 				F1C5407C20AF31B000DB5DFC /* AppColors.swift in Sources */,
+				F1C0DE9220B1D83F00C9DB93 /* Router.swift in Sources */,
 				BE5F38C420AB1C0600E22602 /* JogoTableViewCell.swift in Sources */,
 				BE5F38CC20AB241C00E22602 /* Jogo.swift in Sources */,
 				BE5F38CA20AB234C00E22602 /* Time.swift in Sources */,
