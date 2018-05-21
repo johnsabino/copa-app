@@ -15,4 +15,8 @@ struct Jogo : Decodable {
     var golsCasa : Int
     var golsVisitante : Int
     var tipo : TipoJogo
+    var lances : [Lance]?
+    var tempoDeJogo : Int
+    var data : String
+    
 }

@@ -29,6 +29,7 @@
 		F1C0DE9220B1D83F00C9DB93 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C0DE9120B1D83F00C9DB93 /* Router.swift */; };
 		F1C0DE9420B1F15A00C9DB93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1C0DE9320B1F15A00C9DB93 /* Assets.xcassets */; };
 		F1C0DE9720B204CC00C9DB93 /* JogoDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C0DE9620B204CC00C9DB93 /* JogoDAO.swift */; };
+		F1C0DE9920B26A4B00C9DB93 /* Lance.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C0DE9820B26A4B00C9DB93 /* Lance.swift */; };
 		F1C5407C20AF31B000DB5DFC /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C5407B20AF31B000DB5DFC /* AppColors.swift */; };
 		F1DC731320AA02C300525AB0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DC731120AA02C300525AB0 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		F1C0DE9120B1D83F00C9DB93 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		F1C0DE9320B1F15A00C9DB93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1C0DE9620B204CC00C9DB93 /* JogoDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogoDAO.swift; sourceTree = "<group>"; };
+		F1C0DE9820B26A4B00C9DB93 /* Lance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lance.swift; sourceTree = "<group>"; };
 		F1C5407B20AF31B000DB5DFC /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		F1DC731120AA02C300525AB0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,7 +95,6 @@
 			isa = PBXGroup;
 			children = (
 				F1C0DE9520B204A400C9DB93 /* dao */,
-				F1C0DE9320B1F15A00C9DB93 /* Assets.xcassets */,
 				F1C5407A20AF311000DB5DFC /* models */,
 				F1C5407920AF30E500DB5DFC /* containerView */,
 				BE5F38C620AB1C1600E22602 /* jogoViewCell */,
@@ -101,6 +102,7 @@
 				BE5F38BA20AB199500E22602 /* detailView */,
 				BE499EA220AEF126002955BB /* tableHeaderDetail */,
 				BE02311820A9CBFD004767CB /* AppDelegate.swift */,
+				F1C0DE9320B1F15A00C9DB93 /* Assets.xcassets */,
 				BE02311C20A9CBFD004767CB /* Main.storyboard */,
 				BE02312120A9CBFD004767CB /* LaunchScreen.storyboard */,
 				BE02312420A9CBFD004767CB /* Info.plist */,
@@ -173,6 +175,7 @@
 			children = (
 				BE5F38C920AB234C00E22602 /* Time.swift */,
 				BE5F38CB20AB241C00E22602 /* Jogo.swift */,
+				F1C0DE9820B26A4B00C9DB93 /* Lance.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				BE5F38CA20AB234C00E22602 /* Time.swift in Sources */,
 				BE02311920A9CBFD004767CB /* AppDelegate.swift in Sources */,
 				BE6C255B20AC5C4A003EE702 /* DetailTableViewCell.swift in Sources */,
+				F1C0DE9920B26A4B00C9DB93 /* Lance.swift in Sources */,
 				BE02312B20A9D037004767CB /* MasterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

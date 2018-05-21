@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -46,13 +46,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFa-iA-IO2">
-                        <rect key="frame" x="87" y="38" width="18" height="21"/>
+                        <rect key="frame" x="85" y="38" width="18" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y4P-mX-e8A">
-                        <rect key="frame" x="212" y="38" width="18" height="21"/>
+                        <rect key="frame" x="215" y="38" width="18" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -63,8 +63,8 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="VS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXV-iM-JAA">
-                        <rect key="frame" x="113" y="38" width="91" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="VS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXV-iM-JAA">
+                        <rect key="frame" x="111" y="38" width="96" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -73,13 +73,14 @@
                 <constraints>
                     <constraint firstItem="Un7-0h-oI9" firstAttribute="centerY" secondItem="Zpf-CP-hvb" secondAttribute="centerY" id="2dI-hO-P8g"/>
                     <constraint firstAttribute="trailing" secondItem="3ZR-nc-AC5" secondAttribute="trailing" constant="16" id="E4n-gJ-Vev"/>
-                    <constraint firstItem="Un7-0h-oI9" firstAttribute="leading" secondItem="Y4P-mX-e8A" secondAttribute="trailing" constant="19" id="Een-D8-y3A"/>
+                    <constraint firstItem="Un7-0h-oI9" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Y4P-mX-e8A" secondAttribute="trailing" constant="16" id="Een-D8-y3A"/>
                     <constraint firstItem="Y4P-mX-e8A" firstAttribute="centerY" secondItem="Un7-0h-oI9" secondAttribute="centerY" id="FEa-oh-PmB"/>
                     <constraint firstItem="DQU-gj-6dd" firstAttribute="centerY" secondItem="P66-z0-hpa" secondAttribute="centerY" id="Feg-fH-wDI"/>
                     <constraint firstItem="P66-z0-hpa" firstAttribute="centerX" secondItem="Un7-0h-oI9" secondAttribute="centerX" id="Je7-nb-wlE"/>
                     <constraint firstAttribute="bottom" secondItem="Un7-0h-oI9" secondAttribute="bottom" constant="8.5" id="Jsi-Ch-zRN"/>
+                    <constraint firstItem="Un7-0h-oI9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Y4P-mX-e8A" secondAttribute="trailing" constant="8" id="N9R-Sk-D1q"/>
                     <constraint firstItem="uFa-iA-IO2" firstAttribute="centerY" secondItem="Zpf-CP-hvb" secondAttribute="centerY" id="WBE-j9-Wpm"/>
-                    <constraint firstItem="uFa-iA-IO2" firstAttribute="leading" secondItem="Zpf-CP-hvb" secondAttribute="trailing" constant="18" id="XtX-s1-CGd"/>
+                    <constraint firstItem="uFa-iA-IO2" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Zpf-CP-hvb" secondAttribute="trailing" constant="16" id="XtX-s1-CGd"/>
                     <constraint firstItem="DQU-gj-6dd" firstAttribute="centerX" secondItem="Zpf-CP-hvb" secondAttribute="centerX" id="eCO-B7-SmB"/>
                     <constraint firstItem="3ZR-nc-AC5" firstAttribute="centerY" secondItem="Un7-0h-oI9" secondAttribute="centerY" id="eTF-fV-Bdi"/>
                     <constraint firstItem="3ZR-nc-AC5" firstAttribute="leading" secondItem="Un7-0h-oI9" secondAttribute="trailing" constant="23" id="ebD-St-sfy"/>
@@ -88,6 +89,7 @@
                     <constraint firstItem="Un7-0h-oI9" firstAttribute="top" secondItem="P66-z0-hpa" secondAttribute="bottom" constant="2" id="lZr-Rt-g1b"/>
                     <constraint firstItem="wXV-iM-JAA" firstAttribute="leading" secondItem="uFa-iA-IO2" secondAttribute="trailing" constant="8" id="nQ5-dL-2x6"/>
                     <constraint firstItem="Zpf-CP-hvb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="rK5-fr-AMb"/>
+                    <constraint firstItem="uFa-iA-IO2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Zpf-CP-hvb" secondAttribute="trailing" constant="8" id="vYQ-61-NAY"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

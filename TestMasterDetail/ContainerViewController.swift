@@ -52,7 +52,7 @@ class ContainerViewController: UIViewController, ContainerViewControllerDelegate
         navigationController?.popViewController(animated: true)
     }
     
-    func shouldReturnJogo() -> Jogo {
+    func shouldReturnJogo() -> Jogo? {
         return self.jogo
     }
 

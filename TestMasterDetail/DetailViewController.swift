@@ -8,7 +8,11 @@
 
 import UIKit
 
-class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, TableHeaderDelegate{
+class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, TableHeaderDelegate, DetailDelegate{
+    func shouldReturnJogo() -> Jogo? {
+        return jogo
+    }
+    
     
     @IBOutlet weak var tableView: UITableView!
     var name : String?
@@ -54,14 +58,14 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return jogo?.lances?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell", for: indexPath) as? DetailTableViewCell else {
             return UITableViewCell()
         }
-        
+        cell.lance = jogo?.lances![indexPath.row]
         return cell
     }
     

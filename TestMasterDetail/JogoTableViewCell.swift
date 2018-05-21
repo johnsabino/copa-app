@@ -61,8 +61,22 @@ class JogoTableViewCell: UITableViewCell {
             
             siglaTimeCasa.text = timeCasa.sigla
             siglaTimeVisitante.text = visitante.sigla
-    
-            detailLabel.text = "34'"
+            if jogo.tempoDeJogo > 0 {
+                detailLabel.text = "\(jogo.tempoDeJogo)'"
+            }else {
+                let df  = DateFormatter()
+                df.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+                let date = df.date(from: jogo.data.replacingOccurrences(of: ".000Z", with: ""))
+                df.dateFormat = "dd/MM HH:mm"
+                if let date = date {
+                    detailLabel.numberOfLines = 0
+                    detailLabel.lineBreakMode = .byWordWrapping
+                    
+                    detailLabel.text = df.string(from: date)
+                }
+                
+            }
+            
         }
     }
 }

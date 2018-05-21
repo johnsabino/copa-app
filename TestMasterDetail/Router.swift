@@ -8,14 +8,23 @@
 
 import Foundation
 
+
+
 enum HTTPMethod : String {
     case get = "GET"
 }
 
 enum Router : String {
     case jogos = "/games"
-    
-    private var host : String { return "http://localhost:3000/api/v1" }
+    private var prodution : Bool {
+        return false
+    }
+    private var host : String {
+        if prodution {
+           return "https://academyworldcup.herokuapp.com/api/v1"
+        }
+        return "http://localhost:3000/api/v1"
+    }
     
     private var path : String { return self.rawValue }
     
@@ -46,12 +55,16 @@ enum Router : String {
             }
             let decoder = JSONDecoder()
             guard let data = data else {return}
-            if let result = try? decoder.decode(T.self, from: data) {
+            do {
+                let result = try decoder.decode(T.self, from: data)
                 DispatchQueue.main.async {
                     completion?(result,nil)
                 }
+            }catch{
+                print(error)
             }
-            }.resume()
+            
+        }.resume()
     }
 }
 

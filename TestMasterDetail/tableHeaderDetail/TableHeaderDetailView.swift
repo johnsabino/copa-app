@@ -56,6 +56,10 @@ class TableHeaderDetailView: UIView {
         lblSiglaVisitante.text = timeVisitante?.sigla
         lblTempo.layer.masksToBounds = true
         lblTempo.layer.cornerRadius = 10
+        
+        if jogo?.tipo != .live {
+            lblTempo.text = "dd/mm HH:mm"
+        }
     }
     
     class func instantiateFromXib() -> TableHeaderDetailView? {

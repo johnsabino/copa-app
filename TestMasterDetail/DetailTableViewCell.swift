@@ -16,11 +16,10 @@ class DetailTableViewCell: UITableViewCell {
     @IBOutlet weak var imgViewFlag : UIImageView!
     @IBOutlet weak var lblTitulo : UILabel!
     @IBOutlet weak var lblDescricao : UILabel!
-    
-    
-    var delegate : DetailDelegate? {
+        
+    var lance : Lance? {
         didSet{
-           loadCell()
+            loadCell()
         }
     }
     
@@ -31,6 +30,11 @@ class DetailTableViewCell: UITableViewCell {
     
     func loadCell() {
         
+        lblTempo.text = "1º tempo"
+        lblTempoDeJogo.text = "\(lance!.tempo)'"
+        imgViewFlag.image = UIImage(named: (lance?.time.imagem)!)
+        lblTitulo.text = lance?.titulo
+        lblDescricao.text = lance?.descricao
     }
     
 }
