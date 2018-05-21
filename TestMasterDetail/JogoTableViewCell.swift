@@ -59,8 +59,16 @@ class JogoTableViewCell: UITableViewCell {
             imgTimeCasa.image = UIImage(named: timeCasa.imagem)
             imgTimeVisitante.image = UIImage(named: visitante.imagem)
             
+
+            imgTimeCasa.layer.borderWidth = 1
+            imgTimeCasa.layer.borderColor = AppColors.gray.cgColor
+            
+            imgTimeVisitante.layer.borderWidth = 1
+            imgTimeVisitante.layer.borderColor = AppColors.gray.cgColor
+            
             siglaTimeCasa.text = timeCasa.sigla
             siglaTimeVisitante.text = visitante.sigla
+        
             if jogo.tempoDeJogo > 0 {
                 detailLabel.text = "\(jogo.tempoDeJogo)'"
             }else {

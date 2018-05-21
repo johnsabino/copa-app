@@ -17,7 +17,7 @@ enum HTTPMethod : String {
 enum Router : String {
     case jogos = "/games"
     private var prodution : Bool {
-        return false
+        return true
     }
     private var host : String {
         if prodution {

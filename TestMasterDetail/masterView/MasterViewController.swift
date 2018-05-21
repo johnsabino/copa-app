@@ -56,6 +56,12 @@ class MasterViewController: UITableViewController, JogoCellDelegate {
         JogoDAO.getJogosAsync { (jogos, error) in
             if let jogos = jogos {
                 self.jogos = jogos.filter {$0.tipo == types[index]}
+                if !Device.isSmall(screen: self.view) && !self.jogos.isEmpty{
+                    self.jogoSelected = self.jogos.first
+                    self.delegate?.navegarParaDetailView(jogo: self.jogoSelected)
+                    let index = IndexPath(row: 0, section: 0)
+                    self.tableView.selectRow(at: index, animated: true, scrollPosition: .top)
+                }
                 self.refreshControl?.endRefreshing()
             }
         }

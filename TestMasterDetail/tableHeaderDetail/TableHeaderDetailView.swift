@@ -52,14 +52,25 @@ class TableHeaderDetailView: UIView {
         lblGolsCasa.text = "\(jogo?.golsCasa ?? 0)"
         lblGolsVisitante.text = "\(jogo?.golsVisitante ?? 0)"
         
-        lblSiglaCasa.text = timeCasa?.sigla
-        lblSiglaVisitante.text = timeVisitante?.sigla
+        lblSiglaCasa.text = timeCasa?.nome
+        lblSiglaVisitante.text = timeVisitante?.nome
         lblTempo.layer.masksToBounds = true
         lblTempo.layer.cornerRadius = 10
         
-        if jogo?.tipo != .live {
-            lblTempo.text = "dd/mm HH:mm"
+        lblSiglaCasa.numberOfLines = 0
+        lblSiglaVisitante.numberOfLines = 0
+        
+        if let jogo = jogo{
+            if jogo.tipo != .live {
+                let dataStr = jogo.data
+                let df = DateFormatter()
+                df.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+                let data = df.date(from: (dataStr.replacingOccurrences(of: ".000Z", with: "")))
+                df.dateFormat = "dd/MM HH:mm"
+                lblTempo.text = df.string(from: data!)
+            }
         }
+       
     }
     
     class func instantiateFromXib() -> TableHeaderDetailView? {

@@ -22,6 +22,10 @@ struct AppColors {
         return colorRGB(32, 105, 17, alpha: 1.0)
     }
     
+    static  var gray : UIColor {
+        return colorRGB(102, 102, 102, alpha: 1.0)
+    }
+    
     private static func colorRGB(_ red : CGFloat , _ green : CGFloat, _ blue : CGFloat, alpha : CGFloat)-> UIColor{
         return UIColor(red: red/255.0, green: green/255.0, blue: blue/255.0, alpha: alpha)
     }
